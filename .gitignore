@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+
+# Firebase debug logs
+*-debug.log
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+
+# Firebase local config
+.runtimeconfig.json
+.env
+.env.*
+
+# Accidental firebase init artifacts
+ccproject/
+y
+
+# OS
+.DS_Store
+Thumbs.db

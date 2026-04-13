@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TruthLens — AI Image Authenticity Detector</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <span class="logo-icon">&#128269;</span>
+        <span class="logo-text">TruthLens</span>
+      </div>
+      <p class="tagline">AI Image Authenticity Detector</p>
+    </header>
+
+    <!-- Upload Section -->
+    <main>
+      <section class="upload-card" id="uploadCard">
+        <div
+          class="drop-zone"
+          id="dropZone"
+          role="button"
+          tabindex="0"
+          aria-label="Upload image"
+        >
+          <div class="drop-icon">&#128247;</div>
+          <p class="drop-title">Drop an image here</p>
+          <p class="drop-sub">or click to browse (JPG, PNG, WEBP — max 10 MB)</p>
+          <input type="file" id="fileInput" accept="image/*" hidden />
+        </div>
+
+        <!-- Preview -->
+        <div class="preview-wrap hidden" id="previewWrap">
+          <img id="previewImg" src="" alt="Preview" />
+          <button class="btn-clear" id="btnClear" title="Remove image">&#10005;</button>
+        </div>
+
+        <!-- Analyse button -->
+        <button class="btn-analyse" id="btnAnalyse" disabled>
+          Analyse Image
+        </button>
+      </section>
+
+      <!-- Progress -->
+      <section class="progress-section hidden" id="progressSection">
+        <div class="spinner"></div>
+        <p id="progressMsg">Uploading image…</p>
+      </section>
+
+      <!-- Result Card -->
+      <section class="result-card hidden" id="resultCard">
+        <div class="result-badge" id="resultBadge"></div>
+        <h2 class="result-label" id="resultLabel"></h2>
+        <div class="confidence-bar-wrap">
+          <div class="confidence-bar" id="confidenceBar"></div>
+        </div>
+        <p class="confidence-text" id="confidenceText"></p>
+        <div class="result-meta" id="resultMeta"></div>
+        <button class="btn-reset" id="btnReset">Analyse Another Image</button>
+      </section>
+
+      <!-- Error -->
+      <section class="error-card hidden" id="errorCard">
+        <p class="error-icon">&#9888;</p>
+        <p class="error-msg" id="errorMsg"></p>
+        <button class="btn-reset" id="btnRetry">Try Again</button>
+      </section>
+    </main>
+
+    <footer>
+      <p>Powered by Firebase &amp; Sightengine AI &mdash; Serverless Architecture Demo</p>
+    </footer>
+  </div>
+
+  <!-- Firebase SDKs (compat) -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-storage-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+
+  <script src="app.js"></script>
+</body>
+</html>
