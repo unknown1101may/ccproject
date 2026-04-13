@@ -150,7 +150,7 @@ async function analyseImage() {
     // 3. Call the backend API (Render.com in production, local server in dev)
     const apiBase = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
       ? "http://localhost:3000"
-      : "https://truthlens-api.onrender.com";
+      : "https://ccproject.onrender.com";
     const response = await fetch(`${apiBase}/analyse`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
