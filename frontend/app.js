@@ -147,11 +147,10 @@ async function analyseImage() {
       downloadURL = await storageRef.getDownloadURL();
     }
 
-    // 3. Call our Firebase Cloud Function (HTTP endpoint)
-    // On localhost → hit the functions emulator directly; in production → use hosting rewrite
+    // 3. Call the backend API (Render.com in production, local server in dev)
     const apiBase = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
-      ? "http://127.0.0.1:5001/cloudlab-eb9e3/us-central1/api"
-      : "/api";
+      ? "http://localhost:3000"
+      : "https://truthlens-api.onrender.com";
     const response = await fetch(`${apiBase}/analyse`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },

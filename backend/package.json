@@ -1,0 +1,18 @@
+{
+  "name": "truthlens-backend",
+  "version": "1.0.0",
+  "description": "TruthLens standalone API for Render.com",
+  "main": "server.js",
+  "engines": {
+    "node": "18"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.7",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "form-data": "^4.0.0"
+  }
+}
