@@ -1,0 +1,14 @@
+[
+    {
+        "origin": [
+            "https://cloudlab-eb9e3.web.app"
+        ],
+        "method": [
+            "GET",
+            "POST",
+            "PUT",
+            "DELETE"
+        ],
+        "maxAgeSeconds": 3600
+    }
+]
