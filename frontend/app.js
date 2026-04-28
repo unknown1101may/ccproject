@@ -3,20 +3,20 @@
 // Person 1 owns this file
 // ─────────────────────────────────────────────
 
-// ── Firebase Config ──────────────────────────
+//─ Firebase Config ──────────────────────────
 // Replace these values with your Firebase project config
 // (Firebase Console → Project Settings → Your Apps → SDK setup)
 const firebaseConfig = {
   apiKey: "AIzaSyBlap8XCNmKd7qAh2TgmINN_Hh_IjopZTY",
   authDomain: "cloudlab-eb9e3.firebaseapp.com",
   projectId: "cloudlab-eb9e3",
-  storageBucket: "cloudlab-eb9e3.firebasestorage.app",
+  storageBucket: "cloudlab-eb9e3.firebasestorage.app", // Corrected storage bucket
   messagingSenderId: "287047121500",
   appId: "1:287047121500:web:8122b388ee03cd98bf4499"
 };
 
 firebase.initializeApp(firebaseConfig);
-const storage   = firebase.storage();
+const storage = firebase.storage();
 const firestore = firebase.firestore();
 
 // ── Connect to emulators when running locally ─
