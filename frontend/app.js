@@ -151,7 +151,7 @@ async function analyseImage() {
     const apiBase = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
       ? "http://localhost:3000"
       : "https://ccproject.onrender.com";
-    const response = await fetch(`${apiBase}/analyse`, {
+    const response = await fetch(`https://ccproject-1.onrender.com`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ imageUrl: downloadURL, fileName })
